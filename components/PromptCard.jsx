@@ -15,11 +15,16 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     navigator.clipboard.writeText(post.prompt);
     setTimeout(() => setCopied(""),3000);
   }
+  const [creatorId, setCreatorId] = useState("");
+
+
 
   return (
     <div className="prompt_card">
       <div className="flex justify-between items-start gap-5">
-        <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer" >
+        <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer"
+              onClick={() => router.push('/creator-posts/'+post.creator._id) }
+        >
           <Image
             src={post.creator.image}
             alt="user_image"
@@ -71,6 +76,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
           </div>
         )
       }
+      <p>Parrafo: {creatorId} </p>
     </div>
   );
 };
