@@ -7,11 +7,12 @@ const Home = () => {
         <h1 className='head_text text-center'>
             Descubri & Comparti 
             <br  className='max-md:hidden'/>
-            <span className='orange_gradient text-center'>Respuestas  IA</span>
+            <span className='orange_gradient text-center'>Prompts  IA</span>
 
         </h1>
         <p className='desc text-center'>
-            Promptopia es una herramienta  open-source para crear y compartir consultas a IA
+        Promptopia es una herramienta de prompt de inteligencia artificial de código abierto para que el mundo moderno pueda 
+       descubrir, crear y compartir prompts creativas
         </p>
         <Feed/>
     </section>

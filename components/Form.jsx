@@ -7,14 +7,14 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <span className="blue_gradient"> {type} Post</span>
       </h1>
       <p className="desc text-left max-w-md">
-        {type} and share amazing prompts with the world and any IA platform.
+        {type} y comparta avisos sorprendentes con el mundo y cualquier plataforma de IA.
       </p>
       <form
         onSubmit={handleSubmit}
         className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
       >
                 <label>
-          <span className="font-satoshi font-semibold text-base text-gray-700">Your IA Prompt</span>
+          <span className="font-satoshi font-semibold text-base text-gray-700">Tu IA Prompt</span>
           <textarea
           value={post.prompt}
           onChange={(e) => setPost({...post, prompt: e.target.value})}

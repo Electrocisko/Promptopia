@@ -30,7 +30,7 @@ const EditPrompt = () => {
     const upDatedPrompt = async (e) => {
         e.preventDefault();
         setSubmitting(true);
-        if (!promptId) return alert('Prompt Id not found')
+        if (!promptId) return alert('Prompt Id no encontrado')
         try {
           const response = await fetch(`/api/prompt/${promptId}`,
           {
@@ -54,7 +54,7 @@ const EditPrompt = () => {
 
   return (
     <Form 
-        type="Edit"
+        type="Editar"
         post={post}
         setPost={setPost}
         submitting={submitting}

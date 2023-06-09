@@ -2,16 +2,16 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 
-import Profile from "@components/profile";
+import Profile from "@components/Profile";
 
 const Creator = () => {
   const params = useParams();
   const [posts, setPosts] = useState([]);
-  const [tag, setTag] = useState("")
+  const [tag, setTag] = useState("");
 
   const handleTagClick = (post) => {
-    setTag(post.tag)
-  }
+    setTag(post.tag);
+  };
 
   const fetchPost = async () => {
     const response = await fetch(`/api/users/${params.id}/posts`);
@@ -25,14 +25,13 @@ const Creator = () => {
 
   return (
     <>
-        <Profile
-      name={posts[0] ? posts[0].creator.username: "User"}
-      desc="Post publicate"
-      data={posts}
-      handleTagClick={handleTagClick}
-    />
+      <Profile
+        name={posts[0] ? posts[0].creator.username : "User"}
+        desc="Post publicados"
+        data={posts}
+        handleTagClick={handleTagClick}
+      />
     </>
-
   );
 };
 

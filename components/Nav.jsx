@@ -40,13 +40,13 @@ const Nav = () => {
 
           <div className="flex gap-3 md:gap-5">
             <Link href="/create-prompt" className="black_btn">
-              Create Post
+              Crear Post
             </Link>
             <button
              type="button"
              onClick={signOut}
              className="outline_btn ">
-              Sign out
+              Logout
             </button>
             <Link href="/profile">
               <Image
@@ -70,7 +70,7 @@ const Nav = () => {
                   onClick={() => signIn(provider.id)}
                   className="black_btn"
                 >
-                  Sign-In
+                  Login
                 </button>
               ))}
           </>
