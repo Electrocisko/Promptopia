@@ -23,7 +23,7 @@ const Creator = () => {
 
   return (
     <Profile
-    name= "Creator"
+    name= {posts[0].creator.username}
     desc="Post publicate"
     data={posts}
     />
