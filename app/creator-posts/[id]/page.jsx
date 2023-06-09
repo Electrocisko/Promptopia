@@ -1,20 +1,17 @@
 'use client'
 import {useState, useEffect} from 'react';
-import { useRouter } from 'next/navigation';
+import {  useParams} from 'next/navigation';
 
 import Profile from '@components/profile';
 
+const Creator = () => {
 
-const Creator = ({id}) => {
-
-    console.log('ID del usuario',id)
-
-  const creatorId = '6478db582a880477c371dac4'
+  const params = useParams();
 
     const [posts, setPosts] = useState([]);
 
     const fetchPost = async () => {
-        const response = await fetch(`/api/users/${creatorId}/posts`);
+        const response = await fetch(`/api/users/${params.id}/posts`);
         const data = await response.json();
         setPosts(data);
       };
@@ -23,11 +20,11 @@ const Creator = ({id}) => {
        fetchPost();
       },[]);
 
-    
+
   return (
     <Profile
-    name="Usuario"
-    desc="Pagina ID"
+    name= "Creator"
+    desc="Post publicate"
     data={posts}
     />
   )

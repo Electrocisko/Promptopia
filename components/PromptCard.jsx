@@ -15,8 +15,6 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     navigator.clipboard.writeText(post.prompt);
     setTimeout(() => setCopied(""),3000);
   }
-  const [creatorId, setCreatorId] = useState("");
-
 
 
   return (
@@ -76,7 +74,6 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
           </div>
         )
       }
-      <p>Parrafo: {creatorId} </p>
     </div>
   );
 };
