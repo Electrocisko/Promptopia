@@ -12,7 +12,7 @@ const Home = () => {
         </h1>
         <p className='desc text-center'>
         Promptopia es una herramienta de prompt de inteligencia artificial de código abierto para que el mundo moderno pueda 
-       descubrir, crear y compartir prompts creativas
+       descubrir, crear y compartir prompts creativas.
         </p>
         <Feed/>
     </section>
